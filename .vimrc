@@ -12,14 +12,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nertree'
+Plugin 'scrooloose/nerdtree'
 Plugin 'vim-python/python-syntax'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'nathanaelkane/vim-indent-guides'
-
+Plugin 'Xuyuanp/git-nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:

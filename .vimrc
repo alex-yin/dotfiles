@@ -52,10 +52,6 @@ source ~/.vim_runtime/my_configs.vim
 catch
 endtry
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_show_hidden = 1
 map <C-n> :NERDTreeToggle<CR>
 map <C-c> :NERDTreeClose<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -75,10 +71,18 @@ execute pathogen#infect()
 call pathogen#helptags()
 set hlsearch
 set incsearch
-set nu
 
 " control p setting
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+let g:ctrlp_use_caching = 1
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:10,results:10'
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+" YCM setting
+let g:ycm_autoclose_preview_window_after_insertion = 1

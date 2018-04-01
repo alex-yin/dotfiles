@@ -58,15 +58,16 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeGlyphReadOnly = "RO"
+let g:NERDTreeWinPos = "left"
 let g:python_highlight_all = 1
 
 map <C-t> :IndentGuidesToggle<CR>
 colorscheme Monokai
 
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=dark   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=4
-highlight Pmenu ctermfg=16 ctermbg=23 guifg=#000000 guibg=#005f5f
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=DarkGray   ctermbg=8
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=Gray       ctermbg=0
+highlight Pmenu ctermfg=8 ctermbg=0 guifg=#000000 guibg=#005f5f
 execute pathogen#infect()
 call pathogen#helptags()
 set hlsearch
@@ -77,12 +78,12 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-let g:ctrlp_use_caching = 1
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:10,results:10'
 if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
 " YCM setting
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_max_num_candidates = 5

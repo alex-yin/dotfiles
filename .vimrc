@@ -79,10 +79,9 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:10,results:10'
-if executable('ag')
-    set grepprg=ag\ --nogroup\ --nocolor
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_one_exit = 0
+let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 
 " YCM setting
 let g:ycm_autoclose_preview_window_after_insertion = 1

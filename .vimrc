@@ -20,6 +20,12 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Xuyuanp/git-nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-surround'
+Plugin 'Townk/vim-autoclose'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'jeetsukumaran/vim-indentwise'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -52,7 +58,10 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
 map <C-n> :NERDTreeToggle<CR>
 map <C-c> :NERDTreeClose<CR>
-
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeGlyphReadOnly = "RO"
 let g:python_highlight_all = 1
 
 map <C-t> :IndentGuidesToggle<CR>
@@ -62,3 +71,14 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=dark   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=4
 highlight Pmenu ctermfg=16 ctermbg=23 guifg=#000000 guibg=#005f5f
+execute pathogen#infect()
+call pathogen#helptags()
+set hlsearch
+set incsearch
+set nu
+
+" control p setting
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif

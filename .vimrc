@@ -76,13 +76,12 @@ set incsearch
 " control p setting
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:10,results:10'
 let g:ctrlp_use_caching = 1
-let g:ctrlp_clear_cache_one_exit = 0
+let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
-
 " YCM setting
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_max_num_candidates = 5

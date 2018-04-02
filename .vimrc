@@ -18,7 +18,6 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Xuyuanp/git-nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
@@ -26,6 +25,7 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jeetsukumaran/vim-indentwise'
+Plugin 'Yggdroot/indentLine'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -61,7 +61,7 @@ let g:NERDTreeGlyphReadOnly = "RO"
 let g:NERDTreeWinPos = "left"
 let g:python_highlight_all = 1
 
-map <C-t> :IndentGuidesToggle<CR>
+map <C-t> :IndentLinesToggle<CR>
 colorscheme Monokai
 
 let g:indent_guides_auto_colors = 0

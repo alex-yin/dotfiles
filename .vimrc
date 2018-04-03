@@ -26,6 +26,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'Yggdroot/indentLine'
+Plugin 'scrooloose/nerdcommenter'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -85,3 +86,7 @@ let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 " YCM setting
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_max_num_candidates = 5
+" Nerdcommenter setting
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'

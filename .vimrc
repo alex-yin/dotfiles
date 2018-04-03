@@ -90,3 +90,6 @@ let g:ycm_max_num_candidates = 5
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
+
+imap <Up>: <Up> <CR>
+imap <Down>: <Down> <CR>

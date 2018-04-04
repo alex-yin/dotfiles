@@ -21,7 +21,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'Xuyuanp/git-nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
-Plugin 'Townk/vim-autoclose'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jeetsukumaran/vim-indentwise'
@@ -48,11 +47,7 @@ source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
 
-try
-source ~/.vim_runtime/my_configs.vim
-catch
-endtry
-
+map <C-t> :IndentLinesToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-c> :NERDTreeClose<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -62,7 +57,6 @@ let g:NERDTreeGlyphReadOnly = "RO"
 let g:NERDTreeWinPos = "left"
 let g:python_highlight_all = 1
 
-map <C-t> :IndentLinesToggle<CR>
 colorscheme Monokai
 
 let g:indent_guides_auto_colors = 0
@@ -84,12 +78,16 @@ let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 " YCM setting
-let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_max_num_candidates = 5
 " Nerdcommenter setting
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
-
-imap <Up>: <Up> <CR>
-imap <Down>: <Down> <CR>
+" Insert mode custom keys
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+" Visual mode custom keys
+vnoremap // y/<C-R>"<CR>"

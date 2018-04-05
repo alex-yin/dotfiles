@@ -84,6 +84,11 @@ let g:ycm_max_num_candidates = 5
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
+" Normal custom keys
+nnoremap <S-Up> :resize +5<CR>
+nnoremap <S-Down> :resize -5<CR>
+nnoremap <S-Left> :vertical resize -5<CR>
+nnoremap <S-Right> :vertical resize +5<CR>
 " Insert mode custom keys
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>

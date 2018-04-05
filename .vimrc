@@ -1,4 +1,3 @@
-set showcmd
 set nocompatible              " be iMproved, required
 set number
 filetype off                  " required
@@ -77,22 +76,29 @@ let g:ctrlp_match_window = 'top,order:ttb,min:1,max:10,results:10'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
+
 " YCM setting
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_max_num_candidates = 5
+
 " Nerdcommenter setting
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
+
 " Normal custom keys
 nnoremap <S-Up> :resize +5<CR>
 nnoremap <S-Down> :resize -5<CR>
 nnoremap <S-Left> :vertical resize -5<CR>
 nnoremap <S-Right> :vertical resize +5<CR>
+nnoremap nl o<Esc>
+
 " Insert mode custom keys
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
+
 " Visual mode custom keys
 vnoremap // y/<C-R>"<CR>"
+set showcmd

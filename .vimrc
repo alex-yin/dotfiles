@@ -46,9 +46,6 @@ source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
 
-map <C-t> :IndentLinesToggle<CR>
-map <C-n> :NERDTreeToggle<CR>
-map <C-c> :NERDTreeClose<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeDirArrows = 1
@@ -86,13 +83,18 @@ let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 
+" General mapping
+map <C-t> :IndentLinesToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
+map <C-c> :NERDTreeClose<CR>
+map <C-s> :w<CR>
+
 " Normal custom keys
 nnoremap <S-Up> :resize +5<CR>
 nnoremap <S-Down> :resize -5<CR>
 nnoremap <S-Left> :vertical resize -5<CR>
 nnoremap <S-Right> :vertical resize +5<CR>
 nnoremap nl o<Esc>
-
 " Insert mode custom keys
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>

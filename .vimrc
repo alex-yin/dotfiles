@@ -10,7 +10,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'wincent/command-t'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-python/python-syntax'
 Plugin 'flazz/vim-colorschemes'
@@ -87,7 +87,6 @@ let g:NERDDefaultAlign = 'left'
 map <C-t> :IndentLinesToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-c> :NERDTreeClose<CR>
-map <C-s> :w<CR>
 
 " Normal custom keys
 nnoremap <S-Up> :resize +5<CR>

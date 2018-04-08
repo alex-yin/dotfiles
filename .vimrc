@@ -58,11 +58,11 @@ colorscheme Monokai
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=DarkGray   ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=Gray       ctermbg=0
-highlight Pmenu ctermfg=8 ctermbg=0 guifg=#000000 guibg=#005f5f
 execute pathogen#infect()
 call pathogen#helptags()
 set hlsearch
 set incsearch
+highlight Visual cterm=reverse ctermbg=NONE
 
 " control p setting
 let g:ctrlp_map = '<c-p>'

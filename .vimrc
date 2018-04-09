@@ -63,6 +63,8 @@ call pathogen#helptags()
 set hlsearch
 set incsearch
 highlight Visual cterm=reverse ctermbg=NONE
+highlight Pmenu ctermfg=22 ctermbg=18 guifg=#005f00 guibg=#00005f
+highligh PmenuSel ctermfg=22 ctermbg=144 guifg=#005f00 guibg=#afaf87 
 
 " control p setting
 let g:ctrlp_map = '<c-p>'

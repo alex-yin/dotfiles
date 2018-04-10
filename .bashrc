@@ -94,6 +94,7 @@ alias l='ls -CF'
 alias gor='ssh -X zixuan@gorgoroth.ece.mcgill.ca'
 alias ort='ssh -X zixuan@orthanc.ece.mcgill.ca'
 alias arm='ssh -X zixuan@armagnac.ece.mcgill.ca'
+alias tmux="tmux -2"
 export OPAL=/home/zixuan/neurocompann
 export PROMPT_DIRTRIM=2
 # Alias definitions.

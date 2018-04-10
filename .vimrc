@@ -53,13 +53,9 @@ let g:NERDTreeGlyphReadOnly = "RO"
 let g:NERDTreeWinPos = "left"
 let g:python_highlight_all = 1
 
-colorscheme Monokai
-
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=DarkGray   ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=Gray       ctermbg=0
-execute pathogen#infect()
-call pathogen#helptags()
 set hlsearch
 set incsearch
 highlight Visual cterm=reverse ctermbg=NONE
@@ -79,6 +75,7 @@ let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 " YCM setting
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_max_num_candidates = 5
+let g:ycm_python_binary_path = '~/anaconda3/bin/python3'
 
 " Nerdcommenter setting
 let g:NERDSpaceDelims = 1
@@ -96,6 +93,7 @@ nnoremap <S-Down> :resize -5<CR>
 nnoremap <S-Left> :vertical resize -5<CR>
 nnoremap <S-Right> :vertical resize +5<CR>
 nnoremap nl o<Esc>
+nnoremap <C-G> :YcmCompleter GoTo<CR>
 " Insert mode custom keys
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
@@ -105,3 +103,4 @@ inoremap <C-l> <Right>
 " Visual mode custom keys
 vnoremap // y/<C-R>"<CR>"
 set showcmd
+colorscheme Monokai

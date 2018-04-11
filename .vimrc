@@ -58,7 +58,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=DarkGray   ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=Gray       ctermbg=0
 set hlsearch
 set incsearch
-highlight Visual term=reverse cterm=reverse
+highlight Visual term=reverse cterm=reverse ctermbg=NONE gui=NONE
 highlight Pmenu ctermfg=22 ctermbg=18 guifg=#005f00 guibg=#00005f
 highligh PmenuSel ctermfg=22 ctermbg=144 guifg=#005f00 guibg=#afaf87 
 
@@ -75,7 +75,7 @@ let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 " YCM setting
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_max_num_candidates = 5
-let g:ycm_python_binary_path = '~/anaconda3/bin/python3'
+let g:ycm_python_binary_path = 'python3'
 
 " Nerdcommenter setting
 let g:NERDSpaceDelims = 1
@@ -101,6 +101,11 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
 " Visual mode custom keys
+" / search selection
 vnoremap // y/<C-R>"<CR>"
+" substitute in selection
+vnoremap ss :s/\%V//g <Left><Left><Left><Left>
+
+" final setting
 set showcmd
 colorscheme Monokai

@@ -58,10 +58,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=DarkGray   ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=Gray       ctermbg=0
 set hlsearch
 set incsearch
-highlight Visual term=reverse cterm=reverse ctermbg=NONE gui=NONE
-highlight Pmenu ctermfg=22 ctermbg=18 guifg=#005f00 guibg=#00005f
-highligh PmenuSel ctermfg=22 ctermbg=144 guifg=#005f00 guibg=#afaf87 
-
 " control p setting
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -109,3 +105,7 @@ vnoremap ss :s/\%V//g <Left><Left><Left><Left>
 " final setting
 set showcmd
 colorscheme Monokai
+highlight Visual cterm=reverse ctermbg=NONE gui=NONE
+highlight Pmenu ctermfg=22 ctermbg=18 guifg=#005f00 guibg=#00005f
+highlight PmenuSel ctermfg=22 ctermbg=144 guifg=#005f00 guibg=#afaf87 
+

@@ -72,6 +72,7 @@ let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_max_num_candidates = 5
 let g:ycm_python_binary_path = 'python3'
+let g:ycm_goto_buffer_command = 'new-tab'
 
 " Nerdcommenter setting
 let g:NERDSpaceDelims = 1

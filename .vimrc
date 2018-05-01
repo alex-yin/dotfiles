@@ -91,6 +91,7 @@ nnoremap <S-Down> :resize -5<CR>
 nnoremap <S-Left> :vertical resize -5<CR>
 nnoremap <S-Right> :vertical resize +5<CR>
 nnoremap nl o<Esc>
+nnoremap Nl O<Esc>
 nnoremap <C-G> :YcmCompleter GoTo<CR>
 " Insert mode custom keys
 inoremap <C-j> <Down>

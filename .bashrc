@@ -98,14 +98,6 @@ alias tmux="tmux -2"
 alias ns="nvidia-smi"
 export OPAL=/home/zixuan/neurocompann
 export PROMPT_DIRTRIM=2
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -122,3 +114,7 @@ export PATH=/home/zixuan/bin:/home/zixuan/.local/bin:/usr/local/sbin:/usr/local/
 
 # added by Anaconda3 installer
 export PATH=/home/zixuan/anaconda3/bin:$PATH
+
+# Yavide alias
+alias yavide="gvim --servername yavide -f -N -u /opt/yavide/.vimrc"
+

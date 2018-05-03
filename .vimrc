@@ -26,6 +26,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -111,4 +113,5 @@ colorscheme Monokai
 highlight Visual cterm=reverse ctermbg=NONE gui=NONE
 highlight Pmenu ctermfg=22 ctermbg=18 guifg=#005f00 guibg=#00005f
 highlight PmenuSel ctermfg=22 ctermbg=144 guifg=#005f00 guibg=#afaf87 
+set guifont=Monospace\ 11
 

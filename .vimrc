@@ -109,8 +109,9 @@ vnoremap ss :s/\%V//g <Left><Left><Left><Left>
 
 " final setting
 set showcmd
+set cursorline
 colorscheme Monokai
-highlight Visual cterm=reverse ctermbg=NONE gui=NONE
+highlight Visual cterm=reverse ctermbg=NONE gui=reverse
 highlight Pmenu ctermfg=22 ctermbg=18 guifg=#005f00 guibg=#00005f
 highlight PmenuSel ctermfg=22 ctermbg=144 guifg=#005f00 guibg=#afaf87 
 set guifont=Monospace\ 11

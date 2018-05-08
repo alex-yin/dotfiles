@@ -115,6 +115,3 @@ export PATH=/home/zixuan/bin:/home/zixuan/.local/bin:/usr/local/sbin:/usr/local/
 # added by Anaconda3 installer
 export PATH=/home/zixuan/anaconda3/bin:$PATH
 
-# Yavide alias
-alias yavide="gvim --servername yavide -f -N -u /opt/yavide/.vimrc"
-

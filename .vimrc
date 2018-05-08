@@ -11,7 +11,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'wincent/command-t'
+Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-python/python-syntax'
 Plugin 'flazz/vim-colorschemes'
@@ -28,6 +28,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'vim-scripts/a.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -66,7 +67,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:10,results:10'
+let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:10,results:10'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
@@ -81,6 +82,12 @@ let g:ycm_goto_buffer_command = 'new-tab'
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
+
+" Airline setting
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='badwolf'
+let g:airline_powerline_fonts = 1
+
 
 " General mapping
 map <C-t> :IndentLinesToggle<CR>
@@ -110,7 +117,7 @@ vnoremap ss :s/\%V//g <Left><Left><Left><Left>
 " final setting
 set showcmd
 set cursorline
-colorscheme Monokai
+colorscheme xoria256
 highlight Visual cterm=reverse ctermbg=NONE gui=reverse
 highlight Pmenu ctermfg=22 ctermbg=18 guifg=#005f00 guibg=#00005f
 highlight PmenuSel ctermfg=22 ctermbg=144 guifg=#005f00 guibg=#afaf87 

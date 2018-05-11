@@ -27,8 +27,7 @@ Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'vim-scripts/a.vim'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -77,6 +76,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_max_num_candidates = 5
 let g:ycm_python_binary_path = 'python3'
 let g:ycm_goto_buffer_command = 'new-tab'
+let g:ycm_show_diagnostics_ui = 0
 
 " Nerdcommenter setting
 let g:NERDSpaceDelims = 1
@@ -102,6 +102,8 @@ nnoremap <S-Right> :vertical resize +5<CR>
 nnoremap nl o<Esc>
 nnoremap Nl O<Esc>
 nnoremap <C-G> :YcmCompleter GoTo<CR>
+nnoremap <F8> :TagbarToggle<CR>
+
 " Insert mode custom keys
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
@@ -122,4 +124,5 @@ highlight Visual cterm=reverse ctermbg=NONE gui=reverse
 highlight Pmenu ctermfg=22 ctermbg=18 guifg=#005f00 guibg=#00005f
 highlight PmenuSel ctermfg=22 ctermbg=144 guifg=#005f00 guibg=#afaf87 
 set guifont=Monospace\ 11
+set mouse=a
 

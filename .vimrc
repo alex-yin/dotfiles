@@ -1,15 +1,14 @@
 set nocompatible              " be iMproved, required
 set number
 set relativenumber
+set splitbelow
+set splitright
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
+"" PLUGIN LIST""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -17,38 +16,27 @@ Plugin 'vim-python/python-syntax'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'Xuyuanp/git-nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'godlygeek/tabular'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-startify'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'matze/vim-move'
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 set runtimepath+=~/.vim_runtime
-
 source ~/.vim_runtime/vimrcs/basic.vim
 source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
 
+" Display and highlight settings
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeDirArrows = 1
@@ -61,10 +49,12 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=DarkGray   ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=Gray       ctermbg=0
 set hlsearch
 set incsearch
-" control p setting
+
+"" PLUGIN CONFIG""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ctrlp setting
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 0
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:10,results:10'
 let g:ctrlp_use_caching = 1
@@ -88,7 +78,21 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='badwolf'
 let g:airline_powerline_fonts = 1
 
+" Easymotion setting
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+nmap <Leader><Leader> <Plug>(easymotion-prefix)
+nmap <Leader>j <Plug>(easymotion-j)
+nmap <Leader>k <Plug>(easymotion-k)
 
+" Move
+let g:move_map_keys = 0
+vmap <C-k> <Plug>MoveBlockUp
+vmap <C-j> <Plug>MoveBlockDown
+"" PLUGIN CONFIG""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" KEY MAPPING""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General mapping
 map <C-t> :IndentLinesToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
@@ -111,10 +115,9 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
 " Visual mode custom keys
-" / search selection
 vnoremap // y/<C-R>"<CR>"
-" substitute in selection
 vnoremap ss :s/\%V//g <Left><Left><Left><Left>
+"" KEY MAPPING""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " final setting
 set showcmd

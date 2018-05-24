@@ -115,3 +115,12 @@ export PATH=/home/zixuan/bin:/home/zixuan/.local/bin:/usr/local/sbin:/usr/local/
 # added by Anaconda3 installer
 export PATH=/home/zixuan/anaconda3/bin:$PATH
 
+# powerline shell settings
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+

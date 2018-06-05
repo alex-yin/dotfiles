@@ -118,6 +118,8 @@ export PATH=/home/zixuan/anaconda3/bin:$PATH
 # powerline shell settings
 function _update_ps1() {
     PS1=$(powerline-shell $?)
+    NL=$'\n'
+    PS1="${PS1}${NL}"
 }
 
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then

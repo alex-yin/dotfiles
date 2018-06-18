@@ -86,6 +86,9 @@ nmap <Leader><Leader> <Plug>(easymotion-prefix)
 nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
 
+" Startify
+let g:startify_session_persistence = 1
+
 " Move
 let g:move_map_keys = 0
 vmap <C-k> <Plug>MoveBlockUp
@@ -107,6 +110,8 @@ nnoremap nl o<Esc>
 nnoremap Nl O<Esc>
 nnoremap <C-G> :YcmCompleter GoTo<CR>
 nnoremap <F8> :TagbarToggle<CR>
+nnoremap qq :q<CR>
+nnoremap ww :w<CR>
 
 " Insert mode custom keys
 inoremap <C-j> <Down>
@@ -124,7 +129,7 @@ set showcmd
 set cursorline
 colorscheme xoria256
 highlight Visual cterm=reverse ctermbg=NONE gui=reverse
-highlight Pmenu ctermfg=22 ctermbg=18 guifg=#005f00 guibg=#00005f
+highlight Pmenu ctermfg=22 ctermbg=45 guifg=#005f00 guibg=#00005f
 highlight PmenuSel ctermfg=22 ctermbg=144 guifg=#005f00 guibg=#afaf87 
 set guifont=Monospace\ 11
 set mouse=a

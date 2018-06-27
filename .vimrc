@@ -111,7 +111,6 @@ nnoremap Nl O<Esc>
 nnoremap <C-G> :YcmCompleter GoTo<CR>
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap qq :q<CR>
-nnoremap ww :w<CR>
 
 " Insert mode custom keys
 inoremap <C-j> <Down>
@@ -133,4 +132,5 @@ highlight Pmenu ctermfg=22 ctermbg=45 guifg=#005f00 guibg=#00005f
 highlight PmenuSel ctermfg=22 ctermbg=144 guifg=#005f00 guibg=#afaf87 
 set guifont=Monospace\ 11
 set mouse=a
+set guicursor=n:blinkon1
 

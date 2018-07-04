@@ -3,6 +3,7 @@ set number
 set relativenumber
 set splitbelow
 set splitright
+set autoread
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -33,17 +34,9 @@ filetype plugin indent on    " required
 set runtimepath+=~/.vim_runtime
 source ~/.vim_runtime/vimrcs/basic.vim
 source ~/.vim_runtime/vimrcs/filetypes.vim
-source ~/.vim_runtime/vimrcs/plugins_config.vim
-source ~/.vim_runtime/vimrcs/extended.vim
 
 " Display and highlight settings
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeGlyphReadOnly = "RO"
-let g:NERDTreeWinPos = "left"
 let g:python_highlight_all = 1
-
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=DarkGray   ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=Gray       ctermbg=0
@@ -51,6 +44,13 @@ set hlsearch
 set incsearch
 
 "" PLUGIN CONFIG""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree setting
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeGlyphReadOnly = "RO"
+let g:NERDTreeWinPos = "left"
+
 " Ctrlp setting
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -86,6 +86,11 @@ nmap <Leader><Leader> <Plug>(easymotion-prefix)
 nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
 
+" Commenter setting
+let g:NERDCompactSexyComs = 1
+let g:NERDTrimTrailingWhitespace = 1
+vnoremap <Leader>cc <plug>(NERDCommenterComment)
+
 " Startify
 let g:startify_session_persistence = 1
 
@@ -93,13 +98,18 @@ let g:startify_session_persistence = 1
 let g:move_map_keys = 0
 vmap <C-k> <Plug>MoveBlockUp
 vmap <C-j> <Plug>MoveBlockDown
+
+" Gutter
+let g:gitgutter_enabled=0
 "" PLUGIN CONFIG""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "" KEY MAPPING""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General mapping
+let mapleader = ","
 map <C-t> :IndentLinesToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-c> :NERDTreeClose<CR>
+map <leader><cr> :noh<cr>
 
 " Normal custom keys
 nnoremap <S-Up> :resize +5<CR>
@@ -111,6 +121,7 @@ nnoremap Nl O<Esc>
 nnoremap <C-G> :YcmCompleter GoTo<CR>
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap qq :q<CR>
+nnoremap <leader>w :w!<cr>
 
 " Insert mode custom keys
 inoremap <C-j> <Down>
@@ -124,12 +135,13 @@ vnoremap ss :s/\%V//g <Left><Left><Left><Left>
 "" KEY MAPPING""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " final setting
-set showcmd
-set cursorline
 colorscheme xoria256
 highlight Visual cterm=reverse ctermbg=NONE gui=reverse
 highlight Pmenu ctermfg=22 ctermbg=45 guifg=#005f00 guibg=#00005f
 highlight PmenuSel ctermfg=22 ctermbg=144 guifg=#005f00 guibg=#afaf87 
+set showcmd
+set cursorline
+set diffopt+=vertical
 set guifont=Monospace\ 11
 set mouse=a
 set guicursor=n:blinkon1

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+grep -nr "$1" . --color=auto
+

@@ -37,7 +37,6 @@ source ~/.vim_runtime/vimrcs/filetypes.vim
 
 " Display and highlight settings
 let g:python_highlight_all = 1
-let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=DarkGray   ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=Gray       ctermbg=0
 set hlsearch
@@ -82,7 +81,6 @@ let g:airline_powerline_fonts = 1
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 nmap <Leader>s <Plug>(easymotion-overwin-f2)
-nmap <Leader><Leader> <Plug>(easymotion-prefix)
 nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
 
@@ -101,6 +99,10 @@ vmap <C-j> <Plug>MoveBlockDown
 
 " Gutter
 let g:gitgutter_enabled=0
+
+" indentLine
+let g:indentLine_char = "¦"
+let g:indentLine_setColors = 1
 "" PLUGIN CONFIG""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "" KEY MAPPING""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

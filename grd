@@ -1,4 +1,4 @@
 #!/bin/bash
 
-grep -nr "$1" . --color=auto
+grep -nrH -1 "$1" . --color=auto
 

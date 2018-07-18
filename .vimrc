@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+set magic
 set number
 set relativenumber
 set splitbelow
@@ -133,7 +134,7 @@ inoremap <C-l> <Right>
 
 " Visual mode custom keys
 vnoremap // y/<C-R>"<CR>"
-vnoremap ss :s/\%V//g <Left><Left><Left><Left>
+vnoremap ss :s/\//g <Left><Left><Left><Left>
 "" KEY MAPPING""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " final setting

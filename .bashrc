@@ -96,7 +96,7 @@ alias ort='ssh -X zixuan@orthanc.ece.mcgill.ca'
 alias arm='ssh -X zixuan@armagnac.ece.mcgill.ca'
 alias tmux="tmux -2"
 alias ns="nvidia-smi"
-export OPAL=/home/zixuan/neurocompann
+export OPAL=~/neurocompann
 export PROMPT_DIRTRIM=2
 
 # enable programmable completion features (you don't need to enable
@@ -110,19 +110,19 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=/home/zixuan/bin:/home/zixuan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/zixuan/.vimpkg/bin:$PATH
+export PATH=/home/zixuan/bin:/home/zixuan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$PATH
 
 # added by Anaconda3 installer
 export PATH=/home/zixuan/anaconda3/bin:$PATH
 
 # powerline shell settings
-function _update_ps1() {
-    PS1=$(powerline-shell $?)
-    NL=$'\n'
-    PS1="${PS1}${NL}"
-}
+# function _update_ps1() {
+#     PS1=$(powerline-shell $?)
+#     NL=$'\n'
+#     PS1="${PS1}${NL}"
+# }
 
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+# if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+#     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+# fi
 

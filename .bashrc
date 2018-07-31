@@ -96,7 +96,7 @@ alias ort='ssh -X zixuan@orthanc.ece.mcgill.ca'
 alias arm='ssh -X zixuan@armagnac.ece.mcgill.ca'
 alias tmux="tmux -2"
 alias ns="nvidia-smi"
-export OPAL=~/neurocompann
+alias gs="git status"
 export PROMPT_DIRTRIM=2
 
 # enable programmable completion features (you don't need to enable

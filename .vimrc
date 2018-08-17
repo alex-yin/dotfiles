@@ -29,6 +29,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'mhinz/vim-startify'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'matze/vim-move'
+Plugin 'dhruvasagar/vim-table-mode'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -134,7 +135,7 @@ inoremap <C-l> <Right>
 
 " Visual mode custom keys
 vnoremap // y/<C-R>"<CR>"
-vnoremap ss :s/\//g <Left><Left><Left><Left>
+vnoremap ss :s///g <Left><Left><Left><Left>
 "" KEY MAPPING""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " final setting

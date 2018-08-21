@@ -70,9 +70,10 @@ let g:ycm_goto_buffer_command = 'new-tab'
 let g:ycm_show_diagnostics_ui = 0
 
 " Nerdcommenter setting
-let g:NERDSpaceDelims = 1
+let g:NERDSpaceDelims = 0
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
+let g:NERDTrimTrailingWhitespace = 1
 
 " Airline setting
 let g:airline#extensions#tabline#enabled = 1
@@ -86,11 +87,6 @@ nmap <Leader>s <Plug>(easymotion-overwin-f2)
 nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
 
-" Commenter setting
-let g:NERDCompactSexyComs = 1
-let g:NERDTrimTrailingWhitespace = 1
-vnoremap <Leader>cc <plug>(NERDCommenterComment)
-
 " Startify
 let g:startify_session_persistence = 1
 
@@ -98,9 +94,6 @@ let g:startify_session_persistence = 1
 let g:move_map_keys = 0
 vmap <C-k> <Plug>MoveBlockUp
 vmap <C-j> <Plug>MoveBlockDown
-
-" Gutter
-let g:gitgutter_enabled=0
 
 " indentLine
 let g:indentLine_char = "¦"

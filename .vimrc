@@ -25,7 +25,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'mhinz/vim-startify'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'matze/vim-move'
@@ -73,6 +72,7 @@ let g:ycm_show_diagnostics_ui = 0
 let g:NERDSpaceDelims = 0
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
+let g:NERDRemoveExtraSpaces = 1
 let g:NERDTrimTrailingWhitespace = 1
 
 " Airline setting

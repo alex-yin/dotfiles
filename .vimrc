@@ -140,6 +140,6 @@ set showcmd
 set cursorline
 set diffopt+=vertical
 set guifont=Monospace\ 11
-set mouse=a
 set guicursor=n:blinkon1
+set mouse=a
 

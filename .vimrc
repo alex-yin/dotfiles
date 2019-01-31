@@ -29,6 +29,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'matze/vim-move'
 Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'lervag/vimtex'
 call vundle#end()            " required
 filetype plugin indent on    " required
 

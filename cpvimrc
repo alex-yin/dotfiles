@@ -13,3 +13,5 @@ if [ -f $NVIMRC ]; then
     echo "copied to $NVIMRC"
     cp $MYVIMRC $NVIMRC
 fi
+
+cp -r .vim_runtime ~/

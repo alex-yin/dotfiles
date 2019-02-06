@@ -99,6 +99,10 @@ vmap <C-j> <Plug>MoveBlockDown
 " indentLine
 let g:indentLine_char = "¦"
 let g:indentLine_setColors = 1
+
+" vimtex
+let g:vimtex_complete_enabled = 1
+let g:tex_conceal = ''
 "" PLUGIN CONFIG""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "" KEY MAPPING""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

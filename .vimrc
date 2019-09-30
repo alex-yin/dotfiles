@@ -79,7 +79,7 @@ let g:NERDTrimTrailingWhitespace = 1
 " Airline setting
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='badwolf'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 " Easymotion setting
 let g:EasyMotion_do_mapping = 0
@@ -93,8 +93,6 @@ let g:startify_session_persistence = 1
 
 " Move
 let g:move_map_keys = 0
-vmap <C-k> <Plug>MoveBlockUp
-vmap <C-j> <Plug>MoveBlockDown
 
 " indentLine
 let g:indentLine_char = "¦"
@@ -109,8 +107,6 @@ let g:tex_conceal = ''
 " General mapping
 let mapleader = ","
 map <C-t> :IndentLinesToggle<CR>
-map <C-n> :NERDTreeToggle<CR>
-map <C-c> :NERDTreeClose<CR>
 map <leader><cr> :noh<cr>
 
 " Normal custom keys
@@ -124,6 +120,7 @@ nnoremap <C-G> :YcmCompleter GoTo<CR>
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap qq :q<CR>
 nnoremap <leader>w :w!<cr>
+nnoremap - :NERDTreeToggle<CR>
 
 " Insert mode custom keys
 inoremap <C-j> <Down>
@@ -132,8 +129,12 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
 " Visual mode custom keys
+vnoremap <C-k> <Plug>MoveBlockUp
+vnoremap <C-j> <Plug>MoveBlockDown
 vnoremap // y/<C-R>"<CR>"
 vnoremap ss :s///g <Left><Left><Left><Left>
+
+tnoremap <Esc> <C-\><C-n>
 "" KEY MAPPING""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " final setting

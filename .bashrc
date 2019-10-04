@@ -91,9 +91,6 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-alias gor='ssh -X zixuan@gorgoroth.ece.mcgill.ca'
-alias ort='ssh -X zixuan@orthanc.ece.mcgill.ca'
-alias arm='ssh -X zixuan@armagnac.ece.mcgill.ca'
 alias tmux="tmux -2"
 alias ns="nvidia-smi"
 alias gs="git status"
@@ -116,13 +113,13 @@ export PATH=/home/zixuan/bin:/home/zixuan/.local/bin:/usr/local/sbin:/usr/local/
 export PATH=/home/zixuan/anaconda3/bin:$PATH
 
 # powerline shell settings
-# function _update_ps1() {
-#     PS1=$(powerline-shell $?)
-#     NL=$'\n'
-#     PS1="${PS1}${NL}"
-# }
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+    NL=$'\n'
+    PS1="${PS1}${NL}"
+}
 
-# if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-#     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-# fi
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 

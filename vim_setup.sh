@@ -1,8 +1,6 @@
 #!/bin/bash
 
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-
-cp .vimrc  ~/.vimrc
+./cpvimrc.sh
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 

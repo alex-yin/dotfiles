@@ -92,8 +92,9 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias tmux="tmux -2"
-alias ns="nvidia-smi"
 alias gs="git status"
+alias ns="nvidia-smi"
+alias gtop="watch -n 1 nvidia-smi"
 export PROMPT_DIRTRIM=2
 
 # enable programmable completion features (you don't need to enable
@@ -114,7 +115,11 @@ export PATH=/home/zixuan/anaconda3/bin:$PATH
 
 # powerline shell settings
 function _update_ps1() {
-    PS1=$(powerline-shell $?)
+    if [ command -v powerline-shell 2>/dev/null ]; then
+        PS1=$(powerline-shell $?)
+    else
+        PS1="[\u@\h:\W]\$"
+    fi
     NL=$'\n'
     PS1="${PS1}${NL}"
 }

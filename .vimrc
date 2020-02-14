@@ -12,23 +12,23 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "" PLUGIN LIST""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-python/python-syntax'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'Xuyuanp/git-nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-surround'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-python/python-syntax'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Yggdroot/indentLine'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'mhinz/vim-startify'
-Plugin 'easymotion/vim-easymotion'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/git-nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'Yggdroot/indentLine'
+Plugin 'majutsushi/tagbar'
 Plugin 'matze/vim-move'
-Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'lervag/vimtex'
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -129,8 +129,6 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
 " Visual mode custom keys
-vnoremap <C-k> <Plug>MoveBlockUp
-vnoremap <C-j> <Plug>MoveBlockDown
 vnoremap // y/<C-R>"<CR>"
 vnoremap ss :s///g <Left><Left><Left><Left>
 
